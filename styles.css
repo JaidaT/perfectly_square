@@ -12,9 +12,10 @@ body {
     color: var(--light-text);
 }
 
-/* main {
-
-} */
+main {
+    max-width: 90%;
+    margin: 0 auto;
+}
 
 header {
     text-align: center;
@@ -45,10 +46,10 @@ h5 {
     margin: 1.5rem;
 }
 
+/* --- SUMMARY --- */
 .summary_middle-container {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
     gap: 0.5rem;
 }
 
@@ -61,8 +62,17 @@ h5 {
     padding: 1rem;
     color: var(--primary);
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    gap: 1rem;
     border-radius: 5px;
 }
+
+/* --- ADD EXPENSE --- */
+
+
+/* --- CURRENCY CONVERTER --- */
+
+
+/* --- PAYMENT MADE --- */
 
 
