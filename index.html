@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="script.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+
+    <title>Document</title>
+  </head>
+  <body>
+    <header>
+      <h1>Perfectly Square</h1>
+      <h2>Expense splitter for two</h2>
+    </header>
+
+    <main>
+      <!-- Summary -->
+      <div id="summary" class="card">
+        <div>
+          <h3>Summary</h3>
+        </div>
+        
+        <div class="summary_middle-container">
+            <!-- User 1 -->
+          <div>
+            <h5>[user 1]</h5>
+            <div class="summary_inner-container">
+              <span>Total Spent: $</span>
+              <span>Money owed: $</span>
+            </div>
+          </div>
+          <!-- User 2 -->
+          <div>
+            <h5>[user 2]</h5>
+            <div class="summary_inner-container">
+              <span>Total Spent: $</span>
+              <span>Money owed: $</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Add Expense -->
+      <div id="add-expense" class="card">
+        <div>
+          <h4>Add Expense</h4>
+        </div>
+        
+        <div>
+            <!-- User Select -->
+          <div>
+            <label id="expense-user-select">User</label>
+            <select id="expense-user-select">
+              <option value="[user 1]">User 1</option>
+              <option value="[user 2]">User 2</option>
+            </select>
+          </div>
+          <!-- Expense Name -->
+          <div>
+            <label for="expense-name-input">Expense Name</label>
+            <input id="expense-name-input" type="text">
+          </div>
+          <!-- Expense Amount -->
+          <div>
+            <label for="expense-amount-input">Amount ($)</label>
+            <input id="expense-amount-input" type="number">
+          </div>
+          <!-- Your Cost Share (%) -->
+           <div>
+            <label for="cost-share-input">Your Cost Share (%)</label>
+            <input id="cost-share-input" type="number">
+           </div>
+        </div>
+        <button id="addExpenseBtn">Add Expense</button>
+      </div>
+
+      <!-- Currency Converter (API) -->
+      <div id="converter" class="card">
+        <div>
+          <h4>Currency Converter</h4>
+        </div>
+        
+        <div>
+            <!-- From -->
+            <div>
+                <label for="convert-from-input">From</label>
+                <input type="number" id="convert-from-input">
+                <select>
+                    <option>Canadian Dollar</option>
+                    <option>United States Dollar</option>
+                    <option>Euro</option>
+                    <option>British Pound</option>
+                    <option>Australian Dollar</option>
+                </select>
+            </div>
+            <!-- To -->
+             <div>
+                <label for="convert-to-output">To</label>
+                <output id="convert-to-output">[OUTPUT PLACEHOLDER]</output>
+                <select>
+                    <option>Canadian Dollar</option>
+                    <option>United States Dollar</option>
+                    <option>Euro</option>
+                    <option>British Pound</option>
+                    <option>Australian Dollar</option>
+                </select>
+             </div>
+        </div>
+      </div>
+
+      <!-- Payment Made -->
+      <div id="payment" class="card">
+        <div>
+          <h4>Payment Made</h4>
+        </div>
+        
+        <div>
+            <!-- From -->
+            <div>
+                <label for="payment-from-input">From</label>
+                <select id="payment-from-input">
+                    <option>User 1</option>
+                    <option>User 2</option>
+                </select>
+            </div>
+            <!-- To -->
+            <div>
+                <label for="payment-to-input">To</label>
+                <select id="payment-to-input">
+                    <option>User 1</option>
+                    <option>User 2</option>
+                </select>
+            </div>
+            <!-- Amount -->
+             <div>
+                <label for="payment-amount-input">Amount ($)</label>
+                <input type="number" id="payment-amount-input">
+             </div>
+        </div>
+        <button id="logPaymentBtn">Log Payment</button>
+      </div>
+
+      <!-- Expense Log -->
+      <div id="log" class="card">
+        <div>
+          <h4>Expense Log</h4>
+        </div>
+        
+        <div>
+            [DATE] [EXPENSE NAME] [TOTAL EXPENSE AMOUNT] [USER 1] [USER 2] 
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
