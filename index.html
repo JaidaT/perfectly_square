@@ -12,7 +12,7 @@
     />
     <link rel="stylesheet" href="styles.css" />
 
-    <title>Document</title>
+    <title>Perfectly Square</title>
   </head>
   <body>
     <header>
@@ -32,16 +32,16 @@
           <div class="summary_user">
             <h5>[user 1]</h5>
             <div class="summary_inner-container">
-              <span>Total Spent: $</span>
-              <span>Money owed: $</span>
+              <!-- <p id="summaryU1Total">Total Spent: $</p> -->
+              <p id="summaryU1Owed">Money owed: $</p>
             </div>
           </div>
           <!-- User 2 -->
           <div class="summary_user">
             <h5>[user 2]</h5>
             <div class="summary_inner-container">
-              <span>Total Spent: $</span>
-              <span>Money owed: $</span>
+              <!-- <p id="summaryU2Total">Total Spent: $</p> -->
+              <p id="summaryU2Owed">Money owed: $</p>
             </div>
           </div>
         </div>
@@ -53,9 +53,9 @@
           <h4>Add Expense</h4>
         </div>
         
-        <div>
+        <div class="add-expense_middle-container">
             <!-- User Select -->
-          <div>
+          <div class="add-expense_inner-container">
             <label id="expense-user-select">User</label>
             <select id="expense-user-select">
               <option value="[user 1]">User 1</option>
@@ -63,22 +63,25 @@
             </select>
           </div>
           <!-- Expense Name -->
-          <div>
+          <div class="add-expense_inner-container">
             <label for="expense-name-input">Expense Name</label>
-            <input id="expense-name-input" type="text">
+            <input id="expenseNameInput" type="text">
           </div>
           <!-- Expense Amount -->
-          <div>
+          <div class="add-expense_inner-container">
             <label for="expense-amount-input">Amount ($)</label>
-            <input id="expense-amount-input" type="number">
+            <input id="expenseAmountInput" type="number">
           </div>
           <!-- Your Cost Share (%) -->
-           <div>
+           <div class="add-expense_inner-container">
             <label for="cost-share-input">Your Cost Share (%)</label>
-            <input id="cost-share-input" type="number">
+            <input id="costShareInput" type="number">
            </div>
         </div>
-        <button id="addExpenseBtn">Add Expense</button>
+        <!-- Btn Row -->
+         <div class="btn-row">
+          <button id="addExpenseBtn">Add Expense</button>
+         </div>
       </div>
 
       <!-- Currency Converter (API) -->
@@ -141,7 +144,7 @@
             <!-- Amount -->
              <div>
                 <label for="payment-amount-input">Amount ($)</label>
-                <input type="number" id="payment-amount-input">
+                <input type="number" id="paymentAmountInput">
              </div>
         </div>
         <button id="logPaymentBtn">Log Payment</button>
@@ -150,11 +153,13 @@
       <!-- Expense Log -->
       <div id="log" class="card">
         <div>
-          <h4>Expense Log</h4>
+          <h4>History</h4>
         </div>
         
         <div>
+          <ul id="historyList">
             [DATE] [EXPENSE NAME] [TOTAL EXPENSE AMOUNT] [USER 1] [USER 2] 
+          </ul>
         </div>
       </div>
     </main>

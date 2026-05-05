@@ -62,13 +62,32 @@ h5 {
     padding: 1rem;
     color: var(--primary);
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     gap: 1rem;
     border-radius: 5px;
 }
 
-/* --- ADD EXPENSE --- */
+.summary_inner-container > p {
+    margin: 0.25rem;
+}
 
+/* --- ADD EXPENSE --- */
+.add-expense_middle-container {
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+}
+
+.add-expense_inner-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+/* .add-expense_inner-container > input {
+
+} */
 
 /* --- CURRENCY CONVERTER --- */
 
