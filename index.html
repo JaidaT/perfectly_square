@@ -90,9 +90,9 @@
           <h4>Currency Converter</h4>
         </div>
         
-        <div>
+        <div class="currency-converter_middle-container">
             <!-- From -->
-            <div>
+            <div class="currency-converter_inner-container">
                 <label for="convert-from-input">From</label>
                 <input type="number" id="convert-from-input">
                 <select>
@@ -104,7 +104,7 @@
                 </select>
             </div>
             <!-- To -->
-             <div>
+             <div class="currency-converter_inner-container">
                 <label for="convert-to-output">To</label>
                 <output id="convert-to-output">[OUTPUT PLACEHOLDER]</output>
                 <select>
@@ -116,38 +116,6 @@
                 </select>
              </div>
         </div>
-      </div>
-
-      <!-- Payment Made -->
-      <div id="payment" class="card">
-        <div>
-          <h4>Payment Made</h4>
-        </div>
-        
-        <div>
-            <!-- From -->
-            <div>
-                <label for="payment-from-input">From</label>
-                <select id="payment-from-input">
-                    <option>User 1</option>
-                    <option>User 2</option>
-                </select>
-            </div>
-            <!-- To -->
-            <div>
-                <label for="payment-to-input">To</label>
-                <select id="payment-to-input">
-                    <option>User 1</option>
-                    <option>User 2</option>
-                </select>
-            </div>
-            <!-- Amount -->
-             <div>
-                <label for="payment-amount-input">Amount ($)</label>
-                <input type="number" id="paymentAmountInput">
-             </div>
-        </div>
-        <button id="logPaymentBtn">Log Payment</button>
       </div>
 
       <!-- Expense Log -->
@@ -162,6 +130,7 @@
           </ul>
         </div>
       </div>
+      
     </main>
   </body>
 </html>

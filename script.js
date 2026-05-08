@@ -15,23 +15,13 @@ const addExpenseBtn = document.getElementById("addExpenseBtn");
 
 // --- CURRENCY CONVERTER --- //
 
-
-// --- PAYMENT MADE --- //
-// from user select
-// to user select
-const paymentAmountInput = getElementById("paymentAmountInput");
-const logPaymentBtn = getElementById("logPaymentBtn");
-
 // --- HISTORY --- //
 const historyList = document.getElementById("historyList");
 
 
+
+
 // --- FUNCTIONS --- //
-function displaySummary() {
-    // 
-}
-
-
 function addExpense() {
     // take user select input
     // take expense name and save as string
@@ -47,21 +37,11 @@ function currencyConvert() {
     // request converted currency response from API 
 }
 
-function paymentMade() {
-    // take user "from" select input
-    // take user "to" select input
-    // take 
-}
-
-function displayExpenseLog() {
+function displayHistory() {
     // forEach expense, display date, expense name, 
     // total expense amt, user1's amount paid, and user2's amount paid
 }
 
-function calcSplit() {
-    // 
-}
-
-function calcSummary() {
+function displaySummary() {
     // 
 }
