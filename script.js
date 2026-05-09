@@ -13,7 +13,13 @@ const expenseAmountInput = document.getElementById("expenseAmountInput");
 const costShareInput = document.getElementById("costShareInput");
 const addExpenseBtn = document.getElementById("addExpenseBtn");
 
+// --- EDIT USERS --- ///
+const editUser1Input = document.getElementById("editUser1Input");
+const editUser2Input = document.getElementById("editUser2Input");
+const saveUsersBtn = document.getElementById("saveUsersBtn")
+
 // --- CURRENCY CONVERTER --- //
+
 
 // --- HISTORY --- //
 const historyList = document.getElementById("historyList");
@@ -22,6 +28,12 @@ const historyList = document.getElementById("historyList");
 
 
 // --- FUNCTIONS --- //
+function editUser() {
+    // takes inputs and replaces them as the value for each user
+    // if a field is empty, dont replace existing value
+    // refresh all dislays to show updated name
+}
+
 function addExpense() {
     // take user select input
     // take expense name and save as string

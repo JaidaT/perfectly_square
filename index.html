@@ -21,53 +21,33 @@
     </header>
 
     <main>
-      <!-- Summary -->
-      <div id="summary" class="card">
+      <!-- Currently Owed -->
+      <div id="currently-owed" class="card">
         <div>
-          <h3>Summary</h3>
+          <h3>Currently Owed</h3>
         </div>
 
-        <div class="summary_middle-container">
+        <div class="currently-owed_middle-container">
           <!-- User 1 -->
-          <div class="summary_user">
+          <div class="currently-owed_user">
             <h5>[user 1]</h5>
-            <div class="summary_inner-container">
-              <!-- <p id="summaryU1Total">Total Spent: $</p> -->
-              <p id="summaryU1Owed">Money owed: $</p>
+            <div class="currently-owed_inner-container">
+              <!-- <p id="currently-owedU1Total">Total Spent: $</p> -->
+              <p id="currently-owedU1Owed">Money owed: $0</p>
             </div>
           </div>
           <!-- User 2 -->
-          <div class="summary_user">
+          <div class="currently-owed_user">
             <h5>[user 2]</h5>
-            <div class="summary_inner-container">
-              <!-- <p id="summaryU2Total">Total Spent: $</p> -->
-              <p id="summaryU2Owed">Money owed: $</p>
+            <div class="currently-owed_inner-container">
+              <!-- <p id="currently-owedU2Total">Total Spent: $</p> -->
+              <p id="currently-owedU2Owed">Money owed: $103</p>
             </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Add Expense -->
-      <div id="add-expense" class="card">
-        <div>
-          <h4>Edit Users</h4>
-        </div>
-
-        <div class="edit-user_middle-container">
-          <!-- User 1 -->
-          <div class="edit-user_inner-container">
-            <label for="edit-user-input">Expense Name</label>
-            <input id="editUser1Input" type="text" />
-          </div>
-          <!-- User 2 -->
-          <div class="edit-user_inner-container">
-            <label for="edit-user-input">Amount ($)</label>
-            <input id="editUser2Input" type="test" />
           </div>
         </div>
         <!-- Btn Row -->
         <div class="btn-row">
-          <button id="saveUsersBtn">Save</button>
+          <button id="clearcurrently-owedBtn">Paid</button>
         </div>
       </div>
 
@@ -93,7 +73,7 @@
           </div>
           <!-- Expense Amount -->
           <div class="add-expense_inner-container">
-            <label for="expense-amount-input">Amount ($)</label>
+            <label for="expense-amount-input">Total Amount ($)</label>
             <input id="expenseAmountInput" type="number" />
           </div>
           <!-- Your Cost Share (%) -->
@@ -105,6 +85,30 @@
         <!-- Btn Row -->
         <div class="btn-row">
           <button id="addExpenseBtn">Add Expense</button>
+        </div>
+      </div>
+
+      <!-- Edit Users -->
+      <div id="add-expense" class="card">
+        <div>
+          <h4>Edit Users</h4>
+        </div>
+
+        <div class="edit-user_middle-container">
+          <!-- User 1 -->
+          <div class="edit-user_inner-container">
+            <label for="edit-user-input">User 1 Name</label>
+            <input id="editUser1Input" type="text" />
+          </div>
+          <!-- User 2 -->
+          <div class="edit-user_inner-container">
+            <label for="edit-user-input">User 2 Name</label>
+            <input id="editUser2Input" type="text" />
+          </div>
+        </div>
+        <!-- Btn Row -->
+        <div class="btn-row">
+          <button id="saveUsersBtn">Save</button>
         </div>
       </div>
 
@@ -133,7 +137,7 @@
           <div class="currency-converter_inner-container">
             <label for="convert-to-output">To</label>
             <div class="control-row">
-              <output id="convert-to-output">$</output>
+              <output id="convert-to-output"></output>
               <select>
                 <option>CAD</option>
                 <option>USD</option>
@@ -159,7 +163,6 @@
           <ul id="historyList"></ul>
         </div>
       </div>
-
     </main>
   </body>
 </html>

@@ -17,8 +17,14 @@ body {
 }
 
 main {
-    max-width: 90%;
+    max-width: 55%;
     margin: 0 auto;
+}
+
+@media screen and (max-width: 576px) {
+  main {
+    max-width: 90%;
+  }
 }
 
 header {
@@ -80,18 +86,18 @@ button:active {
     font-weight: bold;
 }
 
-/* --- SUMMARY --- */
-.summary_middle-container {
+/* --- CURRENTLY OWED --- */
+.currently-owed_middle-container {
     display: flex;
     flex-direction: row;
     gap: 0.5rem;
 }
 
-.summary_middle-container > div {
+.currently-owed_middle-container > div {
     flex: 1;
 }
 
-.summary_inner-container {
+.currently-owed_inner-container {
     background-color: var(--light-text);
     padding: 1rem;
     color: var(--primary);
@@ -102,7 +108,7 @@ button:active {
     font-weight: bold;
 }
 
-.summary_inner-container > p {
+.currently-owed_inner-container > p {
     margin: 0.25rem;
 }
 
