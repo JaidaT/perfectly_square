@@ -93,17 +93,13 @@ h5 {
 .add-expense_inner-container > input {
     border: none;
     border-radius: 5px;
-    padding: 1rem
+    padding: 1rem;
 }
 
 .add-expense_inner-container > select {
     border: none;
     border-radius: 5px;
     padding: 0.94rem
-}
-
-.summary_middle-container > div {
-    flex: 1;
 }
 
 .btn-row {
@@ -136,23 +132,44 @@ h5 {
 .currency-converter_middle-container {
     display: flex;
     flex-direction: row;
-    gap: 0.5rem;
     flex-wrap: wrap;
-    align-items: flex-end;
+    gap: 20px;
+    width: 100%
 }
 
 .currency-converter_inner-container {
-    flex: 1;
     display: flex;
     flex-direction: column;
-    padding: 1rem;
-    
+    flex: 1 1 250px;
+    gap: 0.5rem
 }
 
-.currency-converter_inner-container > output {
-    background-color: white;
-    color: var(--primary);
-    padding: 1rem
+.control-row {
+    display: flex;
+    width: 100%;
+}
+
+#convert-from-input,
+#convert-to-output {
+    flex: 2;
+    border: none;
+    border-radius: 5px 0 0 5px;
+    padding: 1rem;
+    min-width: 0;
+}
+
+.currency-converter_inner-container select {
+    border: none;
+    border-radius: 0 5px 5px 0;
+    padding: 0.94rem;
+    border-left: 1px solid var(--primary);
+}
+
+#convert-to-output {
+    display: flex;
+    align-items: center;
+    background-color: var(--light-text);
+    color: var(--primary)
 }
 
 /* --- HISTORY --- */

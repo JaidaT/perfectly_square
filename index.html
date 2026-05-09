@@ -26,9 +26,9 @@
         <div>
           <h3>Summary</h3>
         </div>
-        
+
         <div class="summary_middle-container">
-            <!-- User 1 -->
+          <!-- User 1 -->
           <div class="summary_user">
             <h5>[user 1]</h5>
             <div class="summary_inner-container">
@@ -52,9 +52,9 @@
         <div>
           <h4>Add Expense</h4>
         </div>
-        
+
         <div class="add-expense_middle-container">
-            <!-- User Select -->
+          <!-- User Select -->
           <div class="add-expense_inner-container">
             <label id="expense-user-select">User</label>
             <select id="expense-user-select">
@@ -65,23 +65,23 @@
           <!-- Expense Name -->
           <div class="add-expense_inner-container">
             <label for="expense-name-input">Expense Name</label>
-            <input id="expenseNameInput" type="text">
+            <input id="expenseNameInput" type="text" />
           </div>
           <!-- Expense Amount -->
           <div class="add-expense_inner-container">
             <label for="expense-amount-input">Amount ($)</label>
-            <input id="expenseAmountInput" type="number">
+            <input id="expenseAmountInput" type="number" />
           </div>
           <!-- Your Cost Share (%) -->
-           <div class="add-expense_inner-container">
+          <div class="add-expense_inner-container">
             <label for="cost-share-input">Your Cost Share (%)</label>
-            <input id="costShareInput" type="number">
-           </div>
+            <input id="costShareInput" type="number" />
+          </div>
         </div>
         <!-- Btn Row -->
-         <div class="btn-row">
+        <div class="btn-row">
           <button id="addExpenseBtn">Add Expense</button>
-         </div>
+        </div>
       </div>
 
       <!-- Currency Converter (API) -->
@@ -89,32 +89,36 @@
         <div>
           <h4>Currency Converter</h4>
         </div>
-        
+
         <div class="currency-converter_middle-container">
-            <!-- From -->
-            <div class="currency-converter_inner-container">
-                <label for="convert-from-input">From</label>
-                <input type="number" id="convert-from-input">
-                <select>
-                    <option>Canadian Dollar</option>
-                    <option>United States Dollar</option>
-                    <option>Euro</option>
-                    <option>British Pound</option>
-                    <option>Australian Dollar</option>
-                </select>
+          <!-- From -->
+          <div class="currency-converter_inner-container">
+            <label for="convert-from-input">From</label>
+            <div class="control-row">
+              <input type="number" id="convert-from-input" />
+              <select>
+                <option>CAD</option>
+                <option>USD</option>
+                <option>EUR</option>
+                <option>GBP</option>
+                <option>AUD</option>
+              </select>
             </div>
-            <!-- To -->
-             <div class="currency-converter_inner-container">
-                <label for="convert-to-output">To</label>
-                <output id="convert-to-output">[OUTPUT PLACEHOLDER]</output>
-                <select>
-                    <option>Canadian Dollar</option>
-                    <option>United States Dollar</option>
-                    <option>Euro</option>
-                    <option>British Pound</option>
-                    <option>Australian Dollar</option>
-                </select>
-             </div>
+          </div>
+          <!-- To -->
+          <div class="currency-converter_inner-container">
+            <label for="convert-to-output">To</label>
+            <div class="control-row">
+              <output id="convert-to-output">$</output>
+              <select>
+                <option>CAD</option>
+                <option>USD</option>
+                <option>EUR</option>
+                <option>GBP</option>
+                <option>AUD</option>
+              </select>
+            </div>
+          </div>
         </div>
       </div>
 
@@ -123,14 +127,16 @@
         <div>
           <h4>History</h4>
         </div>
-        
+
         <div>
+          <div>
+            <span>[DATE]</span> <span>[EXPENSE NAME]</span> <span>[TOTAL EXPENSE AMOUNT]</span> <span>[USER 1]</span> <span>[USER 2]</span>
+          </div>
           <ul id="historyList">
-            [DATE] [EXPENSE NAME] [TOTAL EXPENSE AMOUNT] [USER 1] [USER 2] 
+            No history yet...
           </ul>
         </div>
       </div>
-      
     </main>
   </body>
 </html>
