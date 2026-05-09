@@ -21,7 +21,7 @@ main {
     margin: 0 auto;
 }
 
-@media screen and (max-width: 576px) {
+@media screen and (max-width: 600px) {
   main {
     max-width: 90%;
   }
@@ -148,10 +148,11 @@ button:active {
     gap: 0.5rem;
 }
 
-.add-expense_inner-container > input {
+.add-expense_inner-container input {
     border: none;
     border-radius: 5px;
     padding: 1rem;
+    background: var(--light-text);
 }
 
 .add-expense_inner-container > select {
@@ -179,29 +180,27 @@ button:active {
 .control-row {
     display: flex;
     width: 100%;
+    max-width: 100%;
 }
 
-#convert-from-input,
-#convert-to-output {
-    flex: 2;
+#convertFromInput,
+#convertToOutput {
+    flex: 2 1 0;
+    width: 0;
     border: none;
     border-radius: 5px 0 0 5px;
     padding: 1rem;
-    min-width: 0;
+    background-color: var(--light-text);
+    color: var(--primary)
 }
 
 .currency-converter_inner-container select {
+    flex: 1 1 0;
+    width: 0;
     border: none;
     border-radius: 0 5px 5px 0;
     padding: 0.94rem;
     border-left: 1px solid var(--primary);
-}
-
-#convert-to-output {
-    display: flex;
-    align-items: center;
-    background-color: var(--light-text);
-    color: var(--primary)
 }
 
 /* --- HISTORY --- */

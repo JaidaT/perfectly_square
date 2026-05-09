@@ -29,25 +29,25 @@
 
         <div class="currently-owed_middle-container">
           <!-- User 1 -->
-          <div class="currently-owed_user">
-            <h5>[user 1]</h5>
+          <div class="currently-owed_user1">
+            <h5 id="owedUser1Label">[user 1]</h5>
             <div class="currently-owed_inner-container">
               <!-- <p id="currently-owedU1Total">Total Spent: $</p> -->
-              <p id="currently-owedU1Owed">Money owed: $0</p>
+              <p id="u1CurrentlyOwed">Money owed: $0</p>
             </div>
           </div>
           <!-- User 2 -->
-          <div class="currently-owed_user">
-            <h5>[user 2]</h5>
+          <div class="currently-owed_user2">
+            <h5 id="owedUser2Label">[user 2]</h5>
             <div class="currently-owed_inner-container">
               <!-- <p id="currently-owedU2Total">Total Spent: $</p> -->
-              <p id="currently-owedU2Owed">Money owed: $103</p>
+              <p id="u2CurrentlyOwed">Money owed: $103</p>
             </div>
           </div>
         </div>
         <!-- Btn Row -->
         <div class="btn-row">
-          <button id="clearcurrently-owedBtn">Paid</button>
+          <button id="clearOwedBtn">Clear</button>
         </div>
       </div>
 
@@ -60,25 +60,25 @@
         <div class="add-expense_middle-container">
           <!-- User Select -->
           <div class="add-expense_inner-container">
-            <label id="expense-user-select">User</label>
-            <select id="expense-user-select">
-              <option value="[user 1]">User 1</option>
-              <option value="[user 2]">User 2</option>
+            <label for="addExpenseUserSelect">User</label>
+            <select id="addExpenseUserSelect">
+              <option value="[user 1]">[ user 1 ]</option>
+              <option value="[user 2]">[ user 2 ]</option>
             </select>
           </div>
           <!-- Expense Name -->
           <div class="add-expense_inner-container">
-            <label for="expense-name-input">Expense Name</label>
+            <label for="expenseNameInput">Expense Name</label>
             <input id="expenseNameInput" type="text" />
           </div>
           <!-- Expense Amount -->
           <div class="add-expense_inner-container">
-            <label for="expense-amount-input">Total Amount ($)</label>
+            <label for="expenseAmountInput">Total Amount ($)</label>
             <input id="expenseAmountInput" type="number" />
           </div>
           <!-- Your Cost Share (%) -->
           <div class="add-expense_inner-container">
-            <label for="cost-share-input">Your Cost Share (%)</label>
+            <label for="costShareInput">Your Cost Share (%)</label>
             <input id="costShareInput" type="number" />
           </div>
         </div>
@@ -97,12 +97,12 @@
         <div class="edit-user_middle-container">
           <!-- User 1 -->
           <div class="edit-user_inner-container">
-            <label for="edit-user-input">User 1 Name</label>
+            <label for="editUser1Input">User 1 Name</label>
             <input id="editUser1Input" type="text" />
           </div>
           <!-- User 2 -->
           <div class="edit-user_inner-container">
-            <label for="edit-user-input">User 2 Name</label>
+            <label for="editUser2Input">User 2 Name</label>
             <input id="editUser2Input" type="text" />
           </div>
         </div>
@@ -121,10 +121,10 @@
         <div class="currency-converter_middle-container">
           <!-- From -->
           <div class="currency-converter_inner-container">
-            <label for="convert-from-input">From</label>
+            <label for="convertFromInput">From</label>
             <div class="control-row">
-              <input type="number" id="convert-from-input" />
-              <select>
+              <input type="number" id="convertFromInput" />
+              <select id="convertFromSelect">
                 <option>CAD</option>
                 <option>USD</option>
                 <option>EUR</option>
@@ -135,18 +135,22 @@
           </div>
           <!-- To -->
           <div class="currency-converter_inner-container">
-            <label for="convert-to-output">To</label>
+            <label for="convertToOutput">To</label>
             <div class="control-row">
-              <output id="convert-to-output"></output>
-              <select>
-                <option>CAD</option>
+              <output id="convertToOutput"></output>
+              <select id="convertToSelect">
                 <option>USD</option>
+                <option>CAD</option>
                 <option>EUR</option>
                 <option>GBP</option>
                 <option>AUD</option>
               </select>
             </div>
           </div>
+        </div>
+        <!-- Btn Row -->
+        <div class="btn-row">
+          <button id="convertBtn">Convert</button>
         </div>
       </div>
 
