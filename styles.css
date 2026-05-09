@@ -1,3 +1,4 @@
+/* --- UNIVERSAL --- */
 :root {
     --primary: #030D20;
     --secondary: #111827;
@@ -42,11 +43,41 @@ h5 {
     margin-bottom: 12px;
 }
 
+label {
+    margin-top: 0.8rem;
+}
+
 .card {
     background-color: var(--tertiary);
     border-radius:15px;
     padding: 1.5rem;
     margin: 1.5rem;
+}
+
+.btn-row {
+    display: flex;
+}
+
+button {
+    margin-top: 1rem;
+    margin-left: auto;
+    width: 10rem;
+    height: 2.5rem;
+    border-radius: 10px;
+    background-color: var(--btn-default);
+    color: var(--primary);
+    border: none;
+}
+
+button:hover {
+    background-color: var(--btn-hover);
+    color: var(--primary);
+}
+
+button:active {
+    background-color: var(--btn-active);
+    color: var(--primary);
+    font-weight: bold;
 }
 
 /* --- SUMMARY --- */
@@ -75,6 +106,27 @@ h5 {
     margin: 0.25rem;
 }
 
+/* --- EDIT USERS --- */
+.edit-user_middle-container {
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.edit-user_inner-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.edit-user_inner-container > input {
+    border: none;
+    border-radius: 5px;
+    padding: 1rem;
+}
+
 /* --- ADD EXPENSE --- */
 .add-expense_middle-container {
     display: flex;
@@ -100,32 +152,6 @@ h5 {
     border: none;
     border-radius: 5px;
     padding: 0.94rem
-}
-
-.btn-row {
-    display: flex;
-}
-
-#addExpenseBtn {
-    margin-top: 1rem;
-    margin-left: auto;
-    width: 10rem;
-    height: 2.5rem;
-    border-radius: 10px;
-    background-color: var(--btn-default);
-    color: var(--primary);
-    border: none;
-}
-
-#addExpenseBtn:hover {
-    background-color: var(--btn-hover);
-    color: var(--primary);
-}
-
-#addExpenseBtn:active {
-    background-color: var(--btn-active);
-    color: var(--primary);
-    font-weight: bold;
 }
 
 /* --- CURRENCY CONVERTER --- */
@@ -173,4 +199,11 @@ h5 {
 }
 
 /* --- HISTORY --- */
+ul {
+  padding-left: 10px;
+  font-size: medium;
+}
 
+li {
+    margin-bottom: 1rem;
+}

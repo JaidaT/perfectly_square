@@ -50,6 +50,30 @@
       <!-- Add Expense -->
       <div id="add-expense" class="card">
         <div>
+          <h4>Edit Users</h4>
+        </div>
+
+        <div class="edit-user_middle-container">
+          <!-- User 1 -->
+          <div class="edit-user_inner-container">
+            <label for="edit-user-input">Expense Name</label>
+            <input id="editUser1Input" type="text" />
+          </div>
+          <!-- User 2 -->
+          <div class="edit-user_inner-container">
+            <label for="edit-user-input">Amount ($)</label>
+            <input id="editUser2Input" type="test" />
+          </div>
+        </div>
+        <!-- Btn Row -->
+        <div class="btn-row">
+          <button id="saveUsersBtn">Save</button>
+        </div>
+      </div>
+
+      <!-- Add Expense -->
+      <div id="add-expense" class="card">
+        <div>
           <h4>Add Expense</h4>
         </div>
 
@@ -130,13 +154,12 @@
 
         <div>
           <div>
-            <span>[DATE]</span> <span>[EXPENSE NAME]</span> <span>[TOTAL EXPENSE AMOUNT]</span> <span>[USER 1]</span> <span>[USER 2]</span>
+            <!-- <span>[DATE]</span> <span>[EXPENSE NAME]</span> <span>[TOTAL EXPENSE AMOUNT]</span> <span>[USER 1]</span> <span>[USER 2]</span> -->
           </div>
-          <ul id="historyList">
-            No history yet...
-          </ul>
+          <ul id="historyList"></ul>
         </div>
       </div>
+
     </main>
   </body>
 </html>
