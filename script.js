@@ -1,9 +1,10 @@
 // alert("Bonour");
 
+
 // --- DOM ELEMENTS --- //
 // SUMMARY //
-const u1CurrentlyOwed = document.getElementById("u1CurrentlyOwed");
-const u2CurrentlyOwed = document.getElementById("u2CurrentlyOwed");
+const u1OwedDisplay = document.getElementById("u1OwedDisplay");
+const u2OwedDisplay = document.getElementById("u2OwedDisplay");
 const clearOwedBtn = document.getElementById("clearOwedBtn");
 
 // ADD EXPENSE //
@@ -30,9 +31,7 @@ const convertToSelect = document.getElementById("convertToSelect");
 let user1name = JSON.parse(localStorage.getItem("user1name")) || "User 1";
 let user2name = JSON.parse(localStorage.getItem("user2name")) || "User 2";
 
-const expenseHistory = [
-    { date: "", expenseName = "", totalAmt = 0, user1 = user1name, user2 = user2name}
-];
+let expenseHistory = JSON.parse(localStorage.getItem("expenseHistory")) || [];
 
 // --- ON PAGE LOAD --- //
 updateUsernames();
@@ -88,10 +87,42 @@ function updateUsernames() {
 
 function addExpense() {
     // take user select input
+    let activeUser = addExpenseUserSelect.value;
     // take expense name and save as string
+    let expenseName = expenseNameInput.value.trim();
     // take total expense amount and save as number
+    let expenseAmountNum = parseInt(expenseAmountInput.value.trim());
     // take cost split %, change to decimal, and save as number
-    // 
+    let splitPercentNum = parseInt(costShareInput.value.trim());
+    let splitDecimalNum = splitPercentNum / 100
+
+    // calculate each users' amount 
+    let u1Owed = 0;
+    let u2Owed = 0;
+
+    if(activeUser === user1name) {
+        u1Owed = (expenseAmountNum * splitDecimalNum);
+        u2Owed = expenseAmountNum - u1Owed;
+
+        u1OwedDisplay.textContent = "Owed: $0";
+        u2OwedDisplay.textContent = `Owed: $${u2Owed}`
+    }
+    if (activeUser === user2name) {
+        u2Owed = (expenseAmountNum * splitDecimalNum);
+        u1Owed = expenseAmountNum - u2Owed;
+
+        u1OwedDisplay.textContent = `Owed: $${u1Owed}`
+        u2OwedDisplay.textContent = "Owed: $0"
+    }
+
+
+
+
+    // FOR TESTING
+    console.log(activeUser, expenseName, expenseAmountNum, splitDecimalNum)
+    console.log("User 1: " + u1Owed + ". User 2: " + u2Owed);
+
+    // displayOwed(activeUser, splitDecimalNum, expenseAmountNum);
 }
 
 function currencyConvert() {
@@ -106,8 +137,20 @@ function displayHistory() {
     // total expense amt, user1's amount paid, and user2's amount paid
 }
 
-function displaySummary() {
-    // 
+function displayOwed(activeUser, splitDecimalNum, expenseAmountNum) {
+    // let owed = (expenseAmountNum - (expenseAmountNum * splitDecimalNum))
+
+    // // activeUser=user1
+    // if(activeUser === user1name) {
+    //     u1CurrentlyOwed.textContent = "Amount owed: $0"
+    //     u2CurrentlyOwed.textContent = `Amount owed: $${owed}`
+    // }
+    // // activeUser=user2
+    // if(activeUser === user2name) {
+    //     u1CurrentlyOwed.textContent = `Amount owed: $${owed}`
+    //     u2CurrentlyOwed.textContent = "Amount owed: $0"
+    // }
 }
 
-saveUsersBtn.addEventListener("click", editUser)
+saveUsersBtn.addEventListener("click", () => editUser())
+addExpenseBtn.addEventListener("click", () => addExpense())
