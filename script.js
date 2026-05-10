@@ -202,6 +202,22 @@ function currencyConvert() {
   // take currency to convert to
   // pass base currency to API
   // request converted currency response from API
+  const baseCurrencyCode = convertFromSelect.value;
+  const targetCurrencyCode = convertToSelect.value;
+
+  const baseCurrencyAmount = convertFromInput.value;
+
+  console.log(baseCurrencyAmount);
+
+  const url = `https://v6.exchangerate-api.com/v6/3376a6737ec4ea929b72afc9/pair/${baseCurrencyCode}/${targetCurrencyCode}/${baseCurrencyAmount}`;
+
+  fetch(url)
+    .then((response) => response.json())
+    .then((data) => {
+      console.log(`Conversion rate: ${data.conversion_result}`);
+      convertToOutput.textContent = `${data.conversion_result}`;
+    })
+    .catch((error) => console.log("Error: ", error));
 }
 
 // --- ON PAGE LOAD --- //
@@ -210,3 +226,4 @@ displayHistory();
 saveUsersBtn.addEventListener("click", () => editUser());
 addExpenseBtn.addEventListener("click", () => addExpense());
 clearOwedBtn.addEventListener("click", () => clearOwed());
+convertBtn.addEventListener("click", () => currencyConvert());
