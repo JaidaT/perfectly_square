@@ -28,7 +28,10 @@ editUser2Input.placeholder = `${user2name}`;
 const saveUsersBtn = document.getElementById("saveUsersBtn");
 
 // CURRENCY CONVERTER //
+const convertFromInput = document.getElementById("convertFromInput")
+convertFromInput.value = 1;
 const convertFromSelect = document.getElementById("convertFromSelect");
+const convertToOutput = document.getElementById("convertToOutput");
 const convertToSelect = document.getElementById("convertToSelect");
 const convertBtn = document.getElementById("convertBtn");
 
@@ -38,15 +41,14 @@ const historyDisplay = document.getElementById("historyDisplay");
 // --- FUNCTIONS --- //
 function editUser() {
   // takes inputs and replaces them as the value for each user
-  // if a field is empty, dont replace existing value
   const newName1 = editUser1Input.value.trim();
   const newName2 = editUser2Input.value.trim();
-
+  
+  // if a field is empty, dont replace existing value
   if (newName1 !== "") {
     user1name = newName1;
     localStorage.setItem("user1name", JSON.stringify(user1name));
   }
-
   if (newName2 !== "") {
     user2name = newName2;
     localStorage.setItem("user2name", JSON.stringify(user2name));
@@ -199,18 +201,17 @@ function clearOwed() {
 
 function currencyConvert() {
   // take base currency
-  // take currency to convert to
-  // pass base currency to API
-  // request converted currency response from API
   const baseCurrencyCode = convertFromSelect.value;
-  const targetCurrencyCode = convertToSelect.value;
-
   const baseCurrencyAmount = convertFromInput.value;
 
+  // take currency to convert to
+  const targetCurrencyCode = convertToSelect.value;
   console.log(baseCurrencyAmount);
 
+  // pass base cose, target code, and base amount to API
   const url = `https://v6.exchangerate-api.com/v6/3376a6737ec4ea929b72afc9/pair/${baseCurrencyCode}/${targetCurrencyCode}/${baseCurrencyAmount}`;
 
+  // request converted currency response from API
   fetch(url)
     .then((response) => response.json())
     .then((data) => {
