@@ -28,7 +28,7 @@ editUser2Input.placeholder = `${user2name}`;
 const saveUsersBtn = document.getElementById("saveUsersBtn");
 
 // CURRENCY CONVERTER //
-const convertFromInput = document.getElementById("convertFromInput")
+const convertFromInput = document.getElementById("convertFromInput");
 convertFromInput.value = 1;
 const convertFromSelect = document.getElementById("convertFromSelect");
 const convertToOutput = document.getElementById("convertToOutput");
@@ -43,7 +43,7 @@ function editUser() {
   // takes inputs and replaces them as the value for each user
   const newName1 = editUser1Input.value.trim();
   const newName2 = editUser2Input.value.trim();
-  
+
   // if a field is empty, dont replace existing value
   if (newName1 !== "") {
     user1name = newName1;
