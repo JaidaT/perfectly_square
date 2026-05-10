@@ -33,6 +33,7 @@ convertFromInput.value = 1;
 const convertFromSelect = document.getElementById("convertFromSelect");
 const convertToOutput = document.getElementById("convertToOutput");
 const convertToSelect = document.getElementById("convertToSelect");
+const conversionRate = document.getElementById("conversionRate");
 const convertBtn = document.getElementById("convertBtn");
 
 // HISTORY //
@@ -217,6 +218,7 @@ function currencyConvert() {
     .then((data) => {
       console.log(`Conversion rate: ${data.conversion_result}`);
       convertToOutput.textContent = `${data.conversion_result}`;
+      conversionRate.textContent = `1 ${baseCurrencyCode} = ${data.conversion_rate} ${targetCurrencyCode}`
     })
     .catch((error) => console.log("Error: ", error));
 }
@@ -224,6 +226,7 @@ function currencyConvert() {
 // --- ON PAGE LOAD --- //
 updateUsernames();
 displayHistory();
+currencyConvert();
 saveUsersBtn.addEventListener("click", () => editUser());
 addExpenseBtn.addEventListener("click", () => addExpense());
 clearOwedBtn.addEventListener("click", () => clearOwed());
